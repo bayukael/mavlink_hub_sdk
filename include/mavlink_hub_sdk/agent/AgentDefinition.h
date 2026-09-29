@@ -2,7 +2,7 @@
 
 #include "mavlink_hub_sdk/agent/Agent.h"
 #include "mavlink_hub_sdk/agent/AgentConfig.h"
-#include "mavlink_hub_sdk/common/ParseResult.h"
+#include "mavlink_hub_sdk/common/AgentConfigParseResult.h"
 #include "mavlink_hub_sdk/manager_resource_requester/IManagerResourceRequester.h"
 
 #include <memory>
@@ -11,7 +11,6 @@
 
 namespace pendarlab::sdk::mavlink_hub
 {
-  using AgentConfigParseResult = ParseResult<AgentConfig>;
   class AgentDefinition
   {
   public:
