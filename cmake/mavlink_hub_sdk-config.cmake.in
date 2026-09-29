@@ -1,4 +1,4 @@
 @PACKAGE_INIT@
 include(CMakeFindDependencyMacro)
-find_dependency(PendarlabMavlinkEndpoint REQUIRED)
+find_dependency(PendarlabMavlinkEndpoint @MAVLINK_ENDPOINT_VERSION@ REQUIRED)
 include("${CMAKE_CURRENT_LIST_DIR}/mavlink_hub_sdk_targets.cmake")

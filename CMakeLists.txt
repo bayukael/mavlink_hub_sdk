@@ -7,7 +7,9 @@ set(NAMESPACE pendarlab)
 set(PACKAGE_FILENAME mavlink_hub_sdk)
 set(PACKAGE_NAME PendarlabMavlinkHubSdk)
 
-find_package(PendarlabMavlinkEndpoint 1.0.0 REQUIRED)
+set(MAVLINK_ENDPOINT_VERSION "1.0.0")
+
+find_package(PendarlabMavlinkEndpoint ${MAVLINK_ENDPOINT_VERSION} REQUIRED)
 
 ##############################################################################
 ###############################     Agent     ################################
