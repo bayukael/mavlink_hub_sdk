@@ -99,4 +99,9 @@ namespace pendarlab::sdk::mavlink_hub
   {
     return d->state_;
   }
+
+  std::string Agent::report() const
+  {
+    return "agent does not implement a report";
+  }
 } // namespace pendarlab::sdk::mavlink_hub
