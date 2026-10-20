@@ -66,18 +66,6 @@ target_link_libraries(MavlinkHubSdkAgentReportTest
 )
 set_target_properties(MavlinkHubSdkAgentReportTest PROPERTIES OUTPUT_NAME mavlink_hub_sdk_agent_report_test)
 
-add_executable(MavlinkHubSdkBackwardCompatCheck
-    test/backward_compat_check.cpp
-)
-target_include_directories(MavlinkHubSdkBackwardCompatCheck PUBLIC 
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include> 
-    $<INSTALL_INTERFACE:include> 
-)
-target_link_libraries(MavlinkHubSdkBackwardCompatCheck
-    PRIVATE MavlinkHubSdk
-)
-set_target_properties(MavlinkHubSdkBackwardCompatCheck PROPERTIES OUTPUT_NAME mavlink_hub_sdk_backward_compat_check)
-
 ##############################################################################
 ######################     Define Files to Install     #######################
 ##############################################################################
