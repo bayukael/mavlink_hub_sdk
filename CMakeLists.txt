@@ -51,6 +51,21 @@ target_link_libraries(MavlinkHubSdkHeader
 )
 set_target_properties(MavlinkHubSdkHeader PROPERTIES OUTPUT_NAME mavlink_hub_sdk_header)
 
+find_package(GTest CONFIG REQUIRED)
+
+add_executable(MavlinkHubSdkAgentReportTest
+    test/agent_report_test.cpp
+)
+target_include_directories(MavlinkHubSdkAgentReportTest PUBLIC 
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include> 
+    $<INSTALL_INTERFACE:include> 
+)
+target_link_libraries(MavlinkHubSdkAgentReportTest
+    PRIVATE MavlinkHubSdk
+    PRIVATE gtest
+)
+set_target_properties(MavlinkHubSdkAgentReportTest PROPERTIES OUTPUT_NAME mavlink_hub_sdk_agent_report_test)
+
 ##############################################################################
 ######################     Define Files to Install     #######################
 ##############################################################################
